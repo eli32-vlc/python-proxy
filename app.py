@@ -27,7 +27,7 @@ def proxy_request(url):
 @app.route('/<path:url>', methods=['GET', 'POST', 'PUT', 'DELETE'])
 def proxy(url):
     # Construct the full URL
-    full_url = f"http://{url}"
+    full_url = f"https://{url}"
 
     # Proxy the request
     return proxy_request(full_url)
